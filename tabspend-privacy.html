@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Privacy Policy — TabSpend</title>
+  <meta name="description" content="TabSpend Privacy Policy. We collect no personal data. All data stays on your device. No logins, no tracking, no bank access." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://tabspend.app/privacy-policy.html" />
+
+  <meta property="og:title" content="Privacy Policy — TabSpend" />
+  <meta property="og:description" content="TabSpend is local-first. No personal data collected. No servers. No tracking." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tabspend.app/privacy-policy.html" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f1117'/%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%23f59e0b' stroke-width='2'/%3E%3Cline x1='16' y1='8' x2='16' y2='16' stroke='%23f59e0b' stroke-width='2' stroke-linecap='round'/%3E%3Cline x1='16' y1='16' x2='21' y2='19' stroke='%23f59e0b' stroke-width='1.5' stroke-linecap='round'/%3E%3Ccircle cx='16' cy='16' r='1.5' fill='%23f59e0b'/%3E%3C/svg%3E" />
+  <meta name="theme-color" content="#0f1117" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Syne:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --black:    #080a0f;
+      --surface:  #14181f;
+      --surface-2:#1c2130;
+      --line:     rgba(255,255,255,0.07);
+      --line-2:   rgba(255,255,255,0.12);
+      --white:    #f0f2f7;
+      --white-2:  #9ba3b8;
+      --white-3:  #505870;
+      --amber:    #f59e0b;
+      --green:    #10b981;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-ui:  'Syne', sans-serif;
+      --font-mono:'DM Mono', monospace;
+      --max-w: 760px;
+      --radius: 12px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--font-ui);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--amber); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(8,10,15,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      padding: 16px 0;
+      z-index: 100;
+    }
+
+    .nav-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .nav-logo-dot {
+      width: 8px; height: 8px;
+      background: var(--amber);
+      border-radius: 50%;
+    }
+
+    .nav-back {
+      font-size: 12px;
+      color: var(--white-3);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.15s;
+    }
+
+    .nav-back:hover { color: var(--white-2); text-decoration: none; }
+
+    /* ── Page layout ── */
+    .page {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 64px 24px 100px;
+    }
+
+    /* ── Header ── */
+    .page-header {
+      margin-bottom: 56px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .page-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 16px;
+    }
+
+    .page-title {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+
+    .page-meta {
+      font-size: 13px;
+      color: var(--white-3);
+      font-family: var(--font-mono);
+    }
+
+    /* ── Summary cards ── */
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-bottom: 56px;
+    }
+
+    .summary-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 20px;
+      transition: border-color 0.2s;
+    }
+
+    .summary-card:hover { border-color: var(--line-2); }
+
+    .summary-icon { font-size: 22px; margin-bottom: 10px; }
+
+    .summary-title {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .summary-desc {
+      font-size: 12px;
+      color: var(--white-2);
+      line-height: 1.5;
+    }
+
+    /* ── Content ── */
+    .content section {
+      margin-bottom: 48px;
+    }
+
+    .content h2 {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      padding-top: 8px;
+      color: var(--white);
+    }
+
+    .content h3 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      margin-top: 24px;
+      color: var(--white);
+    }
+
+    .content p {
+      font-size: 15px;
+      color: var(--white-2);
+      margin-bottom: 14px;
+      line-height: 1.75;
+    }
+
+    .content ul, .content ol {
+      padding-left: 20px;
+      margin-bottom: 14px;
+    }
+
+    .content li {
+      font-size: 15px;
+      color: var(--white-2);
+      margin-bottom: 8px;
+      line-height: 1.65;
+    }
+
+    .content li::marker { color: var(--amber); }
+
+    /* ── Highlight box ── */
+    .highlight-box {
+      background: rgba(16,185,129,0.06);
+      border: 1px solid rgba(16,185,129,0.2);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin: 24px 0;
+    }
+
+    .highlight-box p {
+      color: #6ee7b7;
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .highlight-box strong { color: #a7f3d0; }
+
+    /* ── Divider ── */
+    .divider {
+      height: 1px;
+      background: var(--line);
+      margin: 40px 0;
+    }
+
+    /* ── Permission table ── */
+    .perm-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 13px;
+    }
+
+    .perm-table th {
+      text-align: left;
+      padding: 10px 14px;
+      background: var(--surface-2);
+      color: var(--white-3);
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .perm-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+
+    .perm-table tr:last-child td { border-bottom: none; }
+
+    .perm-table td:first-child {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--amber);
+      white-space: nowrap;
+    }
+
+    .perm-table td:last-child { color: var(--white-2); }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 28px 0;
+    }
+
+    .footer-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-copy {
+      font-size: 12px;
+      color: var(--white-3);
+      font-family: var(--font-mono);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-links a {
+      font-size: 12px;
+      color: var(--white-3);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .footer-links a:hover { color: var(--white-2); }
+  </style>
+</head>
+<body>
+
+<!-- ── Nav ── -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-dot"></span>
+      TabSpend
+    </a>
+    <a href="index.html" class="nav-back">
+      ← Back to home
+    </a>
+  </div>
+</nav>
+
+<!-- ── Page ── -->
+<main class="page">
+
+  <!-- Header -->
+  <div class="page-header">
+    <div class="page-eyebrow">Legal</div>
+    <h1 class="page-title">Privacy Policy</h1>
+    <div class="page-meta">Last updated: April 2026 &nbsp;·&nbsp; Effective: April 2026</div>
+  </div>
+
+  <!-- TL;DR Summary -->
+  <div class="summary-grid">
+    <div class="summary-card">
+      <div class="summary-icon">🔒</div>
+      <div class="summary-title">No personal data</div>
+      <div class="summary-desc">We don't collect your name, email, or any identifier.</div>
+    </div>
+    <div class="summary-card">
+      <div class="summary-icon">💾</div>
+      <div class="summary-title">Stays on your device</div>
+      <div class="summary-desc">All data is stored locally in your browser. Nothing is sent to our servers.</div>
+    </div>
+    <div class="summary-card">
+      <div class="summary-icon">🏦</div>
+      <div class="summary-title">No financial access</div>
+      <div class="summary-desc">TabSpend reads visible page prices only. Never payment info or accounts.</div>
+    </div>
+    <div class="summary-card">
+      <div class="summary-icon">📋</div>
+      <div class="summary-title">Minimal permissions</div>
+      <div class="summary-desc">Only <code style="font-family:var(--font-mono);font-size:11px">tabs</code>, <code style="font-family:var(--font-mono);font-size:11px">storage</code>, <code style="font-family:var(--font-mono);font-size:11px">activeTab</code>.</div>
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <p><strong>Plain English summary:</strong> TabSpend is a local tool. It reads prices from shopping pages you already have open, adds them up, and shows you the total. It does not transmit, upload, or share any data — not prices, not URLs, not your browsing history. Nothing leaves your browser.</p>
+  </div>
+
+  <!-- Content -->
+  <div class="content">
+
+    <section>
+      <h2>1. Who we are</h2>
+      <p>TabSpend is a Chrome browser extension developed and operated as an independent product. If you have any questions about this policy, you can contact us directly at <a href="mailto:wushumaster75@gmail.com">wushumaster75@gmail.com</a>.</p>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+      <h2>2. What data TabSpend accesses</h2>
+      <p>TabSpend accesses only what is necessary for its core function: showing you how much you have open to spend across shopping tabs.</p>
+
+      <h3>Page content (prices)</h3>
+      <p>On supported e-commerce sites, TabSpend reads visible price and cart total text from the page DOM. This happens entirely within your browser. The data is used only to calculate and display your spend total in the extension popup. It is <strong>never stored persistently</strong> beyond your current browser session unless you are a Pro user with history enabled (see Section 3).</p>
+
+      <h3>Tab URLs and titles</h3>
+      <p>TabSpend reads the URLs of your open tabs to identify which ones are shopping sites. URLs are processed locally and never transmitted externally.</p>
+
+      <h3>Extension storage</h3>
+      <p>TabSpend stores the following in your browser's local extension storage (<code style="font-family:var(--font-mono);font-size:12px;background:var(--surface-2);padding:2px 6px;border-radius:4px">chrome.storage.local</code>):</p>
+      <ul>
+        <li>Your onboarding status (completed or not)</li>
+        <li>Your settings preferences (alert thresholds, toggles)</li>
+        <li>Your Pro license key (if you have purchased Pro)</li>
+        <li>Popup open count (used to determine when to show the review prompt)</li>
+        <li><strong>Pro users only:</strong> A rolling history of aggregated scan totals (the dollar amount detected per session, with a timestamp). No URLs, no product names, no personal data.</li>
+      </ul>
+      <p>All of this data lives exclusively on your device. It cannot be accessed by us or any third party.</p>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+      <h2>3. What data we do NOT collect</h2>
+      <ul>
+        <li>Your name, email address, or any personal identifier</li>
+        <li>Your browsing history</li>
+        <li>The specific products you are viewing or purchasing</li>
+        <li>Payment card details or financial account information</li>
+        <li>Your IP address</li>
+        <li>Device identifiers or fingerprints</li>
+        <li>Crash reports or analytics (beyond any you opt into)</li>
+      </ul>
+      <p>TabSpend has no backend server, no database, and no analytics infrastructure. There is nowhere for your data to go.</p>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+      <h2>4. Chrome extension permissions explained</h2>
+      <p>TabSpend requests the following Chrome permissions. Here is exactly why each one is needed:</p>
+
+      <table class="perm-table">
+        <thead>
+          <tr>
+            <th>Permission</th>
+            <th>Why it's needed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>tabs</td>
+            <td>To list your open tabs and identify which ones are shopping sites (by URL pattern matching). No tab content is read — only the URL and title.</td>
+          </tr>
+          <tr>
+            <td>activeTab</td>
+            <td>To interact with the currently active tab when you click the extension icon.</td>
+          </tr>
+          <tr>
+            <td>storage</td>
+            <td>To save your preferences (alert threshold, Pro key, onboarding status) locally on your device.</td>
+          </tr>
+          <tr>
+            <td>scripting</td>
+            <td>To inject the price-reading content script into supported shopping pages. The script reads only price/total text and reports it back to the extension popup.</td>
+          </tr>
+          <tr>
+            <td>host_permissions (shopping sites)</td>
+            <td>Required for the content script to run on supported e-commerce sites (Amazon, Walmart, eBay, etc.). TabSpend does not run on any other sites.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+      <h2>5. Payment processing (Pro)</h2>
+      <p>If you purchase TabSpend Pro, payment is processed by <strong>Stripe</strong>. You are directed to Stripe's hosted checkout page. TabSpend does not see, process, or store your payment card details at any point.</p>
+      <p>Stripe's privacy policy is available at <a href="https://stripe.com/privacy" target="_blank" rel="noopener">stripe.com/privacy</a>.</p>
+      <p>After a successful payment, a locally-generated license key is stored in your browser's extension storage to unlock Pro features. No payment record is stored by TabSpend.</p>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+      <h2>6. Third-party services</h2>
+      <p>TabSpend does not integrate with any third-party analytics, advertising, or tracking services. The extension popup and options pages load fonts from Google Fonts — this is the only external network request made by the extension interface, and it is subject to <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy</a>.</p>
+      <p>The content scripts that run on shopping sites make no external network requests whatsoever.</p>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+      <h2>7. Data retention and deletion</h2>
+      <p>Because all data is stored locally in your browser, you are in full control of retention and deletion:</p>
+      <ul>
+        <li><strong>To clear all TabSpend data:</strong> Open the extension settings → scroll to "Data" → click "Reset all data".</li>
+        <li><strong>To remove the extension entirely:</strong> Right-click the TabSpend icon in Chrome → "Remove from Chrome". This removes all associated storage.</li>
+        <li><strong>To clear scan history only (Pro):</strong> Open settings → "Clear History".</li>
+      </ul>
+      <p>There is no server-side data to request deletion of, because no server-side data exists.</p>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+      <h2>8. Children's privacy</h2>
+      <p>TabSpend is not directed at children under the age of 13. We do not knowingly collect any information from children. Because we collect no personal data from any user, this applies equally to all age groups.</p>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+      <h2>9. Changes to this policy</h2>
+      <p>If we make material changes to this privacy policy, we will update the "Last updated" date at the top of this page. For significant changes, we may also update the extension description on the Chrome Web Store.</p>
+      <p>Continued use of TabSpend after changes are posted constitutes acceptance of the updated policy.</p>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+      <h2>10. Contact</h2>
+      <p>If you have any questions, concerns, or requests related to this privacy policy or TabSpend's data practices, please contact us at:</p>
+      <p>
+        <a href="mailto:wushumaster75@gmail.com">wushumaster75@gmail.com</a>
+      </p>
+      <p>We aim to respond to all enquiries within 5 business days.</p>
+    </section>
+
+  </div>
+</main>
+
+<!-- ── Footer ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-copy">© 2026 TabSpend. Built for impulsive shoppers.</div>
+    <div class="footer-links">
+      <a href="mailto:wushumaster75@gmail.com">Support</a>
+      <a href="index.html">Home</a>
+      <a href="https://chromewebstore.google.com/detail/tabspend/YOUR_EXT_ID">Chrome Store</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

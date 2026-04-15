@@ -1,0 +1,1639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── Primary SEO ── -->
+  <title>TabSpend — Track Spends Before They Vanish | Free Chrome Extension</title>
+  <meta name="description" content="TabSpend shows you how much you're about to spend across open shopping tabs. Free Chrome extension for Amazon, Walmart, eBay & more. No logins. No tracking. Impulse-buy blocker." />
+  <meta name="keywords" content="spend tracker, impulse buy blocker, cart total tracker, chrome extension, amazon cart tracker, walmart tracker, shopping tab tracker, browser extension, free shopping tool" />
+  <meta name="author" content="TabSpend" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://tabspend.app/" />
+
+  <!-- ── Open Graph (Facebook, LinkedIn, Discord) ── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tabspend.app/" />
+  <meta property="og:title" content="TabSpend — Track Spends Before They Vanish" />
+  <meta property="og:description" content="See your total open-tab spend in real time. Free Chrome extension. Tracks Amazon, Walmart, eBay & 12 more stores passively." />
+  <meta property="og:image" content="https://tabspend.app/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="TabSpend" />
+  <meta property="og:locale" content="en_GB" />
+
+  <!-- ── Twitter Card ── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://tabspend.app/" />
+  <meta name="twitter:title" content="TabSpend — Stop Impulse Buys Instantly" />
+  <meta name="twitter:description" content="Free Chrome extension that shows your total open-tab spend in real time. Works on Amazon, Walmart, eBay & more." />
+  <meta name="twitter:image" content="https://tabspend.app/og-image.png" />
+
+  <!-- ── Favicon / Icons ── -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f1117'/%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%23f59e0b' stroke-width='2'/%3E%3Cline x1='16' y1='8' x2='16' y2='16' stroke='%23f59e0b' stroke-width='2' stroke-linecap='round'/%3E%3Cline x1='16' y1='16' x2='21' y2='19' stroke='%23f59e0b' stroke-width='1.5' stroke-linecap='round'/%3E%3Ccircle cx='16' cy='16' r='1.5' fill='%23f59e0b'/%3E%3C/svg%3E" />
+  <link rel="icon" type="image/png" sizes="32x32" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f1117'/%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%23f59e0b' stroke-width='2'/%3E%3Cline x1='16' y1='8' x2='16' y2='16' stroke='%23f59e0b' stroke-width='2' stroke-linecap='round'/%3E%3Cline x1='16' y1='16' x2='21' y2='19' stroke='%23f59e0b' stroke-width='1.5' stroke-linecap='round'/%3E%3Ccircle cx='16' cy='16' r='1.5' fill='%23f59e0b'/%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='40' fill='%230f1117'/%3E%3Ccircle cx='90' cy='90' r='62' fill='none' stroke='%23f59e0b' stroke-width='10'/%3E%3Cline x1='90' y1='45' x2='90' y2='90' stroke='%23f59e0b' stroke-width='10' stroke-linecap='round'/%3E%3Cline x1='90' y1='90' x2='118' y2='107' stroke='%23f59e0b' stroke-width='8' stroke-linecap='round'/%3E%3Ccircle cx='90' cy='90' r='8' fill='%23f59e0b'/%3E%3C/svg%3E" />
+  <meta name="theme-color" content="#0f1117" />
+  <meta name="msapplication-TileColor" content="#0f1117" />
+
+  <!-- ── Structured Data (JSON-LD) ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "TabSpend",
+    "operatingSystem": "Chrome",
+    "applicationCategory": "BrowserApplication",
+    "offers": [
+      {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "name": "Free Plan"
+      },
+      {
+        "@type": "Offer",
+        "price": "19",
+        "priceCurrency": "USD",
+        "name": "Pro Plan"
+      }
+    ],
+    "description": "TabSpend shows you how much you're about to spend across open shopping tabs. Free Chrome extension. No logins. No tracking.",
+    "url": "https://tabspend.app",
+    "author": {
+      "@type": "Organization",
+      "name": "TabSpend"
+    }
+  }
+  </script>
+
+  <!-- Analytics placeholder: <script async src="https://..."></script> -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Syne:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ═══════════════════════════════════════════════
+       TOKENS
+    ═══════════════════════════════════════════════ */
+    :root {
+      --black:   #080a0f;
+      --off-black: #0f1117;
+      --surface: #14181f;
+      --surface-2: #1c2130;
+      --line:    rgba(255,255,255,0.07);
+      --line-2:  rgba(255,255,255,0.12);
+      --white:   #f0f2f7;
+      --white-2: #9ba3b8;
+      --white-3: #505870;
+      --amber:   #f59e0b;
+      --amber-2: #fbbf24;
+      --amber-dim: rgba(245,158,11,0.12);
+      --red:     #ef4444;
+      --green:   #10b981;
+
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-ui:      'Syne', sans-serif;
+      --font-mono:    'DM Mono', monospace;
+
+      --max-w: 1100px;
+      --radius: 14px;
+      --radius-sm: 8px;
+    }
+
+    /* ═══════════════════════════════════════════════
+       RESET & BASE
+    ═══════════════════════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--font-ui);
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Subtle grain texture overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1000;
+      opacity: 0.4;
+    }
+
+    img, svg { display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ═══════════════════════════════════════════════
+       NAV
+    ═══════════════════════════════════════════════ */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 18px 0;
+      background: rgba(8,10,15,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      transition: background 0.3s;
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-family: var(--font-mono);
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-logo-icon {
+      width: 26px; height: 26px;
+      background: var(--amber-dim);
+      border: 1px solid rgba(245,158,11,0.3);
+      border-radius: 7px;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .nav-logo-icon svg { width: 14px; height: 14px; color: var(--amber); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-link {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--white-2);
+      padding: 6px 12px;
+      border-radius: var(--radius-sm);
+      transition: color 0.15s, background 0.15s;
+    }
+
+    .nav-link:hover { color: var(--white); background: rgba(255,255,255,0.05); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-family: var(--font-ui);
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.15s, transform 0.1s;
+      text-decoration: none;
+    }
+
+    .btn:hover { opacity: 0.88; transform: translateY(-1px); }
+    .btn:active { transform: translateY(0); }
+
+    .btn-primary {
+      background: var(--amber);
+      color: #0f1117;
+      padding: 11px 22px;
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--white);
+      border: 1px solid var(--line-2);
+      padding: 11px 22px;
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+    }
+
+    .btn-ghost:hover { border-color: rgba(255,255,255,0.25); opacity: 1; background: rgba(255,255,255,0.04); transform: translateY(-1px); }
+
+    /* ═══════════════════════════════════════════════
+       HERO
+    ═══════════════════════════════════════════════ */
+    .hero {
+      padding: 160px 0 100px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Ambient glow */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 800px; height: 400px;
+      background: radial-gradient(ellipse at 50% 0%, rgba(245,158,11,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--amber-dim);
+      border: 1px solid rgba(245,158,11,0.2);
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--amber);
+      letter-spacing: 0.05em;
+      margin-bottom: 28px;
+    }
+
+    .hero-eyebrow-dot {
+      width: 6px; height: 6px;
+      background: var(--amber);
+      border-radius: 50%;
+      animation: blink 2s ease-in-out infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.2; }
+    }
+
+    .hero-headline {
+      font-family: var(--font-display);
+      font-size: clamp(44px, 8vw, 82px);
+      font-weight: 900;
+      line-height: 1.0;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+      max-width: 780px;
+    }
+
+    .hero-headline em {
+      font-style: italic;
+      color: var(--amber);
+    }
+
+    .hero-sub {
+      font-size: clamp(16px, 2vw, 19px);
+      color: var(--white-2);
+      max-width: 500px;
+      margin-bottom: 40px;
+      line-height: 1.6;
+      font-weight: 400;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 56px;
+    }
+
+    .btn-cta-primary {
+      background: var(--amber);
+      color: #0f1117;
+      padding: 15px 28px;
+      border-radius: var(--radius-sm);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .btn-cta-secondary {
+      background: transparent;
+      color: var(--white);
+      border: 1px solid var(--line-2);
+      padding: 15px 28px;
+      border-radius: var(--radius-sm);
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .btn-cta-secondary:hover { border-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.04); opacity: 1; }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .hero-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 12px;
+      color: var(--white-3);
+      font-family: var(--font-mono);
+    }
+
+    .hero-meta-item svg { width: 13px; height: 13px; color: var(--green); }
+
+    /* ═══════════════════════════════════════════════
+       DEMO WIDGET (animated)
+    ═══════════════════════════════════════════════ */
+    .demo-section {
+      padding: 0 0 120px;
+    }
+
+    .demo-wrapper {
+      position: relative;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    /* Glow behind widget */
+    .demo-wrapper::before {
+      content: '';
+      position: absolute;
+      inset: -40px;
+      background: radial-gradient(ellipse at 50% 50%, rgba(245,158,11,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .demo-card {
+      background: var(--surface);
+      border: 1px solid var(--line-2);
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Browser chrome bar */
+    .demo-browser-bar {
+      background: var(--surface-2);
+      border-bottom: 1px solid var(--line);
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .browser-dots {
+      display: flex; gap: 6px;
+    }
+
+    .browser-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+    }
+
+    .browser-dot:nth-child(1) { background: #ff5f57; }
+    .browser-dot:nth-child(2) { background: #febc2e; }
+    .browser-dot:nth-child(3) { background: #28c840; }
+
+    .browser-url {
+      flex: 1;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 4px 12px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--white-3);
+    }
+
+    /* Tab strip */
+    .demo-tabs-strip {
+      display: flex;
+      gap: 0;
+      background: var(--surface-2);
+      padding: 0 16px;
+      border-bottom: 1px solid var(--line);
+      overflow-x: auto;
+    }
+
+    .demo-tab {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 9px 14px;
+      font-size: 11px;
+      color: var(--white-3);
+      border-bottom: 2px solid transparent;
+      white-space: nowrap;
+      cursor: default;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .demo-tab.active {
+      color: var(--white);
+      border-bottom-color: var(--amber);
+    }
+
+    .demo-tab-favicon { font-size: 12px; }
+
+    /* Main popup mockup */
+    .demo-content {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      min-height: 320px;
+    }
+
+    @media (max-width: 600px) {
+      .demo-content { grid-template-columns: 1fr; }
+      .demo-popup { border-left: none; border-top: 1px solid var(--line); }
+    }
+
+    .demo-page-mock {
+      padding: 28px 24px;
+      position: relative;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 28px,
+        rgba(255,255,255,0.015) 28px,
+        rgba(255,255,255,0.015) 29px
+      );
+    }
+
+    .demo-page-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px;
+      background: var(--surface-2);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      margin-bottom: 10px;
+      animation: slideIn 0.4s ease both;
+    }
+
+    .demo-page-item:nth-child(1) { animation-delay: 0.1s; }
+    .demo-page-item:nth-child(2) { animation-delay: 0.25s; }
+    .demo-page-item:nth-child(3) { animation-delay: 0.4s; }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-10px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .demo-product-img {
+      width: 44px; height: 44px;
+      border-radius: 7px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+
+    .demo-product-info { flex: 1; }
+
+    .demo-product-name {
+      font-size: 12px;
+      font-weight: 500;
+      margin-bottom: 3px;
+    }
+
+    .demo-product-site {
+      font-size: 10px;
+      color: var(--white-3);
+      font-family: var(--font-mono);
+    }
+
+    .demo-product-price {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--white-2);
+    }
+
+    /* Extension popup */
+    .demo-popup {
+      border-left: 1px solid var(--line);
+      padding: 20px 18px;
+      background: #0f1117;
+    }
+
+    .popup-header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+
+    .popup-logo {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--white-2);
+    }
+
+    .popup-logo-dot {
+      width: 8px; height: 8px;
+      background: var(--amber);
+      border-radius: 50%;
+    }
+
+    .popup-total-label {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--white-3);
+      margin-bottom: 2px;
+    }
+
+    .popup-total-amount {
+      font-family: var(--font-mono);
+      font-size: 32px;
+      font-weight: 500;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .popup-total-amount span {
+      animation: countTo 2s ease forwards;
+    }
+
+    @keyframes countTo {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .popup-total-meta {
+      font-size: 10px;
+      color: var(--white-3);
+      font-family: var(--font-mono);
+      margin-bottom: 16px;
+    }
+
+    .popup-alert {
+      display: flex;
+      align-items: flex-start;
+      gap: 7px;
+      background: rgba(239,68,68,0.08);
+      border: 1px solid rgba(239,68,68,0.2);
+      border-radius: 7px;
+      padding: 8px 10px;
+      font-size: 10px;
+      color: #fca5a5;
+      line-height: 1.4;
+      margin-bottom: 14px;
+    }
+
+    .popup-alert-icon { font-size: 12px; flex-shrink: 0; }
+
+    .popup-site-list {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .popup-site-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6px 8px;
+      background: var(--surface);
+      border-radius: 6px;
+      font-size: 11px;
+    }
+
+    .popup-site-name {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      color: var(--white-2);
+    }
+
+    .popup-site-emoji { font-size: 13px; }
+
+    .popup-site-price {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--amber);
+    }
+
+    /* ═══════════════════════════════════════════════
+       HOW IT WORKS
+    ═══════════════════════════════════════════════ */
+    .how-section {
+      padding: 100px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 16px;
+    }
+
+    .section-heading {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 56px;
+      max-width: 540px;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2px;
+    }
+
+    .step-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      padding: 32px 28px;
+      position: relative;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .step-card:first-child { border-radius: var(--radius) 0 0 var(--radius); }
+    .step-card:last-child  { border-radius: 0 var(--radius) var(--radius) 0; }
+
+    @media (max-width: 700px) {
+      .step-card { border-radius: 0 !important; }
+      .step-card:first-child { border-radius: var(--radius) var(--radius) 0 0 !important; }
+      .step-card:last-child  { border-radius: 0 0 var(--radius) var(--radius) !important; }
+    }
+
+    .step-card:hover {
+      border-color: var(--line-2);
+      background: var(--surface-2);
+    }
+
+    .step-number {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--white-3);
+      margin-bottom: 16px;
+    }
+
+    .step-icon {
+      font-size: 28px;
+      margin-bottom: 14px;
+    }
+
+    .step-title {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--white);
+    }
+
+    .step-desc {
+      font-size: 13px;
+      color: var(--white-2);
+      line-height: 1.6;
+    }
+
+    .step-pro-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: var(--amber-dim);
+      border: 1px solid rgba(245,158,11,0.2);
+      border-radius: 4px;
+      padding: 2px 7px;
+      font-size: 9px;
+      font-weight: 600;
+      color: var(--amber);
+      letter-spacing: 0.06em;
+      margin-top: 8px;
+    }
+
+    /* ═══════════════════════════════════════════════
+       PRICING TABLE
+    ═══════════════════════════════════════════════ */
+    .pricing-section {
+      padding: 100px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      max-width: 720px;
+    }
+
+    @media (max-width: 640px) {
+      .pricing-grid { grid-template-columns: 1fr; }
+    }
+
+    .pricing-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pricing-card.featured {
+      border-color: rgba(245,158,11,0.3);
+      background: linear-gradient(135deg, rgba(245,158,11,0.06) 0%, var(--surface) 60%);
+    }
+
+    .pricing-card.featured::before {
+      content: 'RECOMMENDED';
+      position: absolute;
+      top: 16px; right: -24px;
+      background: var(--amber);
+      color: #0f1117;
+      font-family: var(--font-mono);
+      font-size: 9px;
+      font-weight: 500;
+      padding: 4px 32px;
+      transform: rotate(45deg);
+      transform-origin: center;
+    }
+
+    .pricing-tier-name {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--white-3);
+      margin-bottom: 8px;
+    }
+
+    .featured .pricing-tier-name { color: var(--amber); }
+
+    .pricing-price-big {
+      font-family: var(--font-display);
+      font-size: 44px;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .pricing-price-note {
+      font-size: 12px;
+      color: var(--white-3);
+      margin-bottom: 24px;
+      font-family: var(--font-mono);
+    }
+
+    .pricing-divider {
+      height: 1px;
+      background: var(--line);
+      margin-bottom: 20px;
+    }
+
+    .pricing-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .pricing-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--white-2);
+      line-height: 1.4;
+    }
+
+    .feat-check { color: var(--green); flex-shrink: 0; font-size: 14px; }
+    .feat-cross { color: var(--white-3); flex-shrink: 0; font-size: 14px; }
+
+    /* ═══════════════════════════════════════════════
+       PRIVACY
+    ═══════════════════════════════════════════════ */
+    .privacy-section {
+      padding: 100px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .privacy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 48px;
+    }
+
+    .privacy-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px 22px;
+      transition: border-color 0.2s;
+    }
+
+    .privacy-card:hover { border-color: var(--line-2); }
+
+    .privacy-icon {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .privacy-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .privacy-desc {
+      font-size: 12px;
+      color: var(--white-2);
+      line-height: 1.6;
+    }
+
+    /* ═══════════════════════════════════════════════
+       VIRAL / SHARE
+    ═══════════════════════════════════════════════ */
+    .viral-section {
+      padding: 100px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .viral-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    @media (max-width: 700px) {
+      .viral-inner { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    .share-card-preview {
+      background: var(--surface);
+      border: 1px solid var(--line-2);
+      border-radius: var(--radius);
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .share-card-preview::before {
+      content: '';
+      position: absolute;
+      top: -30px; right: -30px;
+      width: 120px; height: 120px;
+      background: radial-gradient(circle, rgba(245,158,11,0.1) 0%, transparent 70%);
+    }
+
+    .share-card-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .share-card-logo {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .share-card-dot { color: var(--amber); }
+
+    .share-card-stat {
+      margin-bottom: 6px;
+    }
+
+    .share-card-stat-label {
+      font-size: 11px;
+      color: var(--white-3);
+      font-family: var(--font-mono);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .share-card-stat-value {
+      font-family: var(--font-display);
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--amber);
+      line-height: 1.1;
+    }
+
+    .share-card-note {
+      font-size: 12px;
+      color: var(--white-2);
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+    }
+
+    .share-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .share-actions h3 {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .share-actions p {
+      font-size: 14px;
+      color: var(--white-2);
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    .share-btn-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn-share-x {
+      background: #000;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      transition: background 0.15s, opacity 0.15s;
+    }
+
+    .btn-share-x:hover { background: #111; }
+
+    .btn-share-reddit {
+      background: #ff4500;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      transition: opacity 0.15s;
+    }
+
+    .btn-share-reddit:hover { opacity: 0.85; }
+
+    .btn-copy-snippet {
+      background: var(--surface);
+      color: var(--white-2);
+      border: 1px solid var(--line-2);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      transition: border-color 0.15s, color 0.15s;
+      font-family: var(--font-ui);
+    }
+
+    .btn-copy-snippet:hover { border-color: rgba(255,255,255,0.25); color: var(--white); }
+
+    .copy-toast {
+      position: fixed;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: var(--surface-2);
+      border: 1px solid var(--line-2);
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-size: 13px;
+      font-weight: 500;
+      opacity: 0;
+      transition: opacity 0.2s, transform 0.2s;
+      pointer-events: none;
+      z-index: 200;
+    }
+
+    .copy-toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* ═══════════════════════════════════════════════
+       FINAL CTA
+    ═══════════════════════════════════════════════ */
+    .final-cta-section {
+      padding: 120px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .final-cta-section::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 600px; height: 300px;
+      background: radial-gradient(ellipse at 50% 100%, rgba(245,158,11,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .final-headline {
+      font-family: var(--font-display);
+      font-size: clamp(36px, 6vw, 64px);
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin-bottom: 18px;
+    }
+
+    .final-sub {
+      font-size: 16px;
+      color: var(--white-2);
+      max-width: 440px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+    }
+
+    .final-ctas {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-final-primary {
+      background: var(--amber);
+      color: #0f1117;
+      padding: 16px 32px;
+      border-radius: var(--radius-sm);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .btn-final-ghost {
+      background: transparent;
+      color: var(--white);
+      border: 1px solid var(--line-2);
+      padding: 16px 32px;
+      border-radius: var(--radius-sm);
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .btn-final-ghost:hover { border-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.04); opacity: 1; }
+
+    /* ═══════════════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════════════ */
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 32px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-copy {
+      font-size: 12px;
+      color: var(--white-3);
+      font-family: var(--font-mono);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-links a {
+      font-size: 12px;
+      color: var(--white-3);
+      transition: color 0.15s;
+    }
+
+    .footer-links a:hover { color: var(--white-2); }
+
+    /* ═══════════════════════════════════════════════
+       SCROLL REVEAL
+    ═══════════════════════════════════════════════ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ═══════════════════════════════════════════════
+       COUNTER ANIMATION
+    ═══════════════════════════════════════════════ */
+    #counter-amount {
+      display: inline-block;
+      min-width: 90px;
+    }
+
+    /* ═══════════════════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════════════════ */
+    @media (max-width: 768px) {
+      .nav-links .nav-link { display: none; }
+      .hero { padding: 120px 0 80px; }
+      .how-section, .pricing-section, .privacy-section, .viral-section { padding: 72px 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ────────────────────────────────────────── -->
+<nav>
+  <div class="container">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <div class="nav-logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 6v6l4 2"/>
+          </svg>
+        </div>
+        TabSpend
+      </div>
+      <div class="nav-links">
+        <a href="#how" class="nav-link">How it works</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#privacy" class="nav-link">Privacy</a>
+        <a href="https://chromewebstore.google.com/detail/tabspend/YOUR_EXT_ID" class="btn btn-primary" style="font-size:12px;padding:8px 16px">Add to Chrome</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ───────────────────────────────────────── -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-eyebrow">
+      <span class="hero-eyebrow-dot"></span>
+      Free Chrome Extension
+    </div>
+    <h1 class="hero-headline">
+      Stop impulse<br>
+      buys <em>instantly.</em>
+    </h1>
+    <p class="hero-sub">
+      TabSpend shows what you're about to spend across open shopping tabs — before you click checkout.
+    </p>
+    <div class="hero-ctas">
+      <a href="https://chromewebstore.google.com/detail/tabspend/YOUR_EXT_ID" class="btn btn-cta-primary">
+        <!-- analytics: data-event="hero_cta_install" -->
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 12l4 4 4-4M12 8v8"/></svg>
+        Add to Chrome — it's free
+      </a>
+      <a href="https://buy.stripe.com/3cI28saZsggq7KveF61B60a" class="btn btn-cta-secondary">
+        <!-- analytics: data-event="hero_cta_pro" -->
+        Unlock Pro — $19
+      </a>
+    </div>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+        No login required
+      </div>
+      <div class="hero-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+        No bank access
+      </div>
+      <div class="hero-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Works passively
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── DEMO ───────────────────────────────────────── -->
+<section class="demo-section">
+  <div class="container">
+    <div class="demo-wrapper reveal">
+      <div class="demo-card">
+
+        <!-- Browser chrome -->
+        <div class="demo-browser-bar">
+          <div class="browser-dots">
+            <div class="browser-dot"></div>
+            <div class="browser-dot"></div>
+            <div class="browser-dot"></div>
+          </div>
+          <div class="browser-url">amazon.com/cart</div>
+        </div>
+
+        <!-- Tab strip -->
+        <div class="demo-tabs-strip">
+          <div class="demo-tab active">
+            <span class="demo-tab-favicon">🛒</span> Amazon — Cart
+          </div>
+          <div class="demo-tab">
+            <span class="demo-tab-favicon">🏪</span> Walmart
+          </div>
+          <div class="demo-tab">
+            <span class="demo-tab-favicon">🏷️</span> eBay — Watching
+          </div>
+          <div class="demo-tab">
+            <span class="demo-tab-favicon">🎨</span> Etsy — Favourites
+          </div>
+        </div>
+
+        <!-- Main content -->
+        <div class="demo-content">
+
+          <!-- Page mock -->
+          <div class="demo-page-mock">
+            <div style="font-size:11px;color:var(--white-3);font-family:var(--font-mono);margin-bottom:14px;letter-spacing:0.06em;text-transform:uppercase">Your cart (3 items)</div>
+            <div class="demo-page-item">
+              <div class="demo-product-img" style="background:rgba(59,130,246,0.1)">📦</div>
+              <div class="demo-product-info">
+                <div class="demo-product-name">Mechanical Keyboard</div>
+                <div class="demo-product-site">amazon.com</div>
+              </div>
+              <div class="demo-product-price">$89.99</div>
+            </div>
+            <div class="demo-page-item">
+              <div class="demo-product-img" style="background:rgba(16,185,129,0.1)">🖱️</div>
+              <div class="demo-product-info">
+                <div class="demo-product-name">Wireless Mouse</div>
+                <div class="demo-product-site">amazon.com</div>
+              </div>
+              <div class="demo-product-price">$34.95</div>
+            </div>
+            <div class="demo-page-item">
+              <div class="demo-product-img" style="background:rgba(245,158,11,0.1)">💡</div>
+              <div class="demo-product-info">
+                <div class="demo-product-name">LED Desk Lamp</div>
+                <div class="demo-product-site">amazon.com</div>
+              </div>
+              <div class="demo-product-price">$27.50</div>
+            </div>
+          </div>
+
+          <!-- Popup mock -->
+          <div class="demo-popup">
+            <div class="popup-header-row">
+              <div class="popup-logo">
+                <span class="popup-logo-dot"></span>
+                TabSpend
+              </div>
+            </div>
+
+            <div class="popup-total-label">Open Tabs Spend</div>
+            <div class="popup-total-amount">$<span id="counter-amount">247.83</span></div>
+            <div class="popup-total-meta">across 4 sites</div>
+
+            <div class="popup-alert">
+              <span class="popup-alert-icon">⚠️</span>
+              Impulse risk: $247 across 4 tabs — pause before buying
+            </div>
+
+            <div class="popup-site-list">
+              <div class="popup-site-row">
+                <div class="popup-site-name"><span class="popup-site-emoji">🛒</span> Amazon</div>
+                <div class="popup-site-price">$152.44</div>
+              </div>
+              <div class="popup-site-row">
+                <div class="popup-site-name"><span class="popup-site-emoji">🏪</span> Walmart</div>
+                <div class="popup-site-price">$48.99</div>
+              </div>
+              <div class="popup-site-row">
+                <div class="popup-site-name"><span class="popup-site-emoji">🏷️</span> eBay</div>
+                <div class="popup-site-price">$31.40</div>
+              </div>
+              <div class="popup-site-row">
+                <div class="popup-site-name"><span class="popup-site-emoji">🎨</span> Etsy</div>
+                <div class="popup-site-price">$15.00</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ───────────────────────────────── -->
+<section class="how-section" id="how">
+  <div class="container">
+    <div class="section-label">How it works</div>
+    <h2 class="section-heading reveal">
+      Four steps.<br>No setup needed.
+    </h2>
+    <div class="steps-grid reveal">
+      <div class="step-card">
+        <div class="step-number">01</div>
+        <div class="step-icon">🔍</div>
+        <div class="step-title">Scan shopping tabs</div>
+        <div class="step-desc">TabSpend detects open tabs on Amazon, Walmart, eBay, Etsy and 12 more stores automatically.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-number">02</div>
+        <div class="step-icon">➕</div>
+        <div class="step-title">Sum visible cart totals</div>
+        <div class="step-desc">Reads cart totals and product prices from each tab's DOM. Nothing is sent anywhere — it all runs locally.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-number">03</div>
+        <div class="step-icon">🚨</div>
+        <div class="step-title">Show spend alerts</div>
+        <div class="step-desc">When your open-tab spend crosses a threshold, TabSpend flags an impulse-risk alert in the popup.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-number">04</div>
+        <div class="step-icon">📈</div>
+        <div class="step-title">Unlock history & rules</div>
+        <div class="step-desc">Go Pro for 90-day spend history, custom budget rules, and a shareable savings summary.</div>
+        <div class="step-pro-tag">⚡ PRO</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PRICING ────────────────────────────────────── -->
+<section class="pricing-section" id="pricing">
+  <div class="container">
+    <div class="section-label">Pricing</div>
+    <h2 class="section-heading reveal">Simple. Honest.<br>No subscriptions.</h2>
+    <div class="pricing-grid reveal">
+
+      <!-- Free -->
+      <div class="pricing-card">
+        <div class="pricing-tier-name">Free</div>
+        <div class="pricing-price-big">$0</div>
+        <div class="pricing-price-note">always free</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li><span class="feat-check">✓</span> Live spend dashboard</li>
+          <li><span class="feat-check">✓</span> Impulse-risk alerts</li>
+          <li><span class="feat-check">✓</span> Amazon, Walmart, eBay + 12 more</li>
+          <li><span class="feat-check">✓</span> Badge total on extension icon</li>
+          <li><span class="feat-cross">–</span> Spend history</li>
+          <li><span class="feat-cross">–</span> Budget rules</li>
+          <li><span class="feat-cross">–</span> Shareable savings card</li>
+        </ul>
+        <a href="https://chromewebstore.google.com/detail/tabspend/YOUR_EXT_ID" class="btn btn-ghost" style="width:100%;justify-content:center;font-size:14px">
+          Add to Chrome
+        </a>
+      </div>
+
+      <!-- Pro -->
+      <div class="pricing-card featured">
+        <div class="pricing-tier-name">Pro ⚡</div>
+        <div class="pricing-price-big" style="color:var(--amber)">$19</div>
+        <div class="pricing-price-note">one-time · yours forever</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li><span class="feat-check">✓</span> Everything in Free</li>
+          <li><span class="feat-check" style="color:var(--amber)">✓</span> 90-day spend history</li>
+          <li><span class="feat-check" style="color:var(--amber)">✓</span> Custom budget alert rules</li>
+          <li><span class="feat-check" style="color:var(--amber)">✓</span> Shareable savings card</li>
+          <li><span class="feat-check" style="color:var(--amber)">✓</span> Spend trend charts</li>
+          <li><span class="feat-check" style="color:var(--amber)">✓</span> Data export (JSON)</li>
+          <li><span class="feat-check" style="color:var(--amber)">✓</span> All future updates</li>
+        </ul>
+        <a href="https://buy.stripe.com/3cI28saZsggq7KveF61B60a" class="btn btn-primary" style="width:100%;justify-content:center;font-size:14px;padding:13px">
+          <!-- analytics: data-event="pricing_cta_pro" -->
+          Unlock Pro — $19
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── PRIVACY ────────────────────────────────────── -->
+<section class="privacy-section" id="privacy">
+  <div class="container">
+    <div class="section-label">Privacy</div>
+    <h2 class="section-heading reveal">
+      Your data stays<br>on your device.
+    </h2>
+    <div class="privacy-grid reveal">
+      <div class="privacy-card">
+        <div class="privacy-icon">🔒</div>
+        <div class="privacy-title">No logins</div>
+        <div class="privacy-desc">TabSpend requires no account, email, or sign-up. Install and it works.</div>
+      </div>
+      <div class="privacy-card">
+        <div class="privacy-icon">🏦</div>
+        <div class="privacy-title">No bank access</div>
+        <div class="privacy-desc">TabSpend reads visible page prices only. It never touches payment info, accounts, or credentials.</div>
+      </div>
+      <div class="privacy-card">
+        <div class="privacy-icon">💾</div>
+        <div class="privacy-title">Local-first</div>
+        <div class="privacy-desc">All data is stored in your browser's local storage. Nothing is sent to any server.</div>
+      </div>
+      <div class="privacy-card">
+        <div class="privacy-icon">📋</div>
+        <div class="privacy-title">Transparent permissions</div>
+        <div class="privacy-desc">TabSpend requests only <code style="font-family:var(--font-mono);font-size:11px;background:var(--surface-2);padding:1px 5px;border-radius:3px">tabs</code>, <code style="font-family:var(--font-mono);font-size:11px;background:var(--surface-2);padding:1px 5px;border-radius:3px">storage</code>, and <code style="font-family:var(--font-mono);font-size:11px;background:var(--surface-2);padding:1px 5px;border-radius:3px">activeTab</code>. That's it.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── VIRAL / SHARE ──────────────────────────────── -->
+<section class="viral-section" id="share">
+  <div class="container">
+    <div class="viral-inner">
+
+      <!-- Share card preview -->
+      <div class="share-card-preview reveal">
+        <div class="share-card-header">
+          <div class="popup-logo-dot" style="width:8px;height:8px;background:var(--amber);border-radius:50%;display:inline-block"></div>
+          <div class="share-card-logo">TabSpend</div>
+        </div>
+        <div class="share-card-stat">
+          <div class="share-card-stat-label">I tracked this week</div>
+          <div class="share-card-stat-value">$347</div>
+        </div>
+        <div style="font-size:12px;color:var(--white-3);font-family:var(--font-mono);margin-top:4px">across 12 shopping sessions</div>
+        <div class="share-card-note">
+          Tracked passively with TabSpend — free Chrome extension.<br>
+          <span style="color:var(--amber)">tabspend.app</span>
+        </div>
+      </div>
+
+      <!-- Share actions -->
+      <div class="share-actions reveal">
+        <div class="section-label">Spread the word</div>
+        <h3>Share your<br>savings moment</h3>
+        <p>When TabSpend catches a big impulse spend, share it. Let others know what they're missing — and help us grow organically.</p>
+        <div class="share-btn-row">
+          <button class="btn-share-x" onclick="shareOnX()">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.261 5.632 5.903-5.632zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            Post on X
+          </button>
+          <button class="btn-share-reddit" onclick="shareOnReddit()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
+            Post on Reddit
+          </button>
+          <button class="btn-copy-snippet" onclick="copyShareSnippet()">
+            📋 Copy text
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FINAL CTA ──────────────────────────────────── -->
+<section class="final-cta-section">
+  <div class="container">
+    <h2 class="final-headline reveal">
+      Start tracking.<br>
+      <em style="font-family:var(--font-display);font-style:italic;color:var(--amber)">Stop overspending.</em>
+    </h2>
+    <p class="final-sub reveal">
+      Free forever. One-time Pro unlock. No subscriptions, no accounts, no tracking.
+    </p>
+    <div class="final-ctas reveal">
+      <a href="https://chromewebstore.google.com/detail/tabspend/YOUR_EXT_ID" class="btn btn-final-primary">
+        <!-- analytics: data-event="footer_cta_install" -->
+        Add to Chrome — Free
+      </a>
+      <a href="https://buy.stripe.com/3cI28saZsggq7KveF61B60a" class="btn btn-final-ghost">
+        <!-- analytics: data-event="footer_cta_pro" -->
+        Unlock Pro — $19
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-copy">© 2026 TabSpend. Built for impulsive shoppers.</div>
+      <div class="footer-links">
+        <a href="mailto:wushumaster75@gmail.com">Support</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="https://chromewebstore.google.com/detail/tabspend/YOUR_EXT_ID">Chrome Store</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ── TOAST ──────────────────────────────────────── -->
+<div class="copy-toast" id="copy-toast">✓ Copied to clipboard</div>
+
+<script>
+  // ── Scroll reveal ──────────────────────────────
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  revealEls.forEach(el => observer.observe(el));
+
+  // ── Counter animation on demo ──────────────────
+  function animateCounter(el, target, duration = 1800) {
+    let start = null;
+    const step = (timestamp) => {
+      if (!start) start = timestamp;
+      const progress = Math.min((timestamp - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = (eased * target).toFixed(2);
+      if (progress < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
+  // Trigger counter when demo is visible
+  const counterEl = document.getElementById('counter-amount');
+  const counterObserver = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      animateCounter(counterEl, 247.83);
+      counterObserver.disconnect();
+    }
+  }, { threshold: 0.5 });
+  counterObserver.observe(counterEl);
+
+  // ── Share functions ────────────────────────────
+  const SHARE_TEXT = `I've been tracking my open-tab shopping spend with TabSpend — free Chrome extension that shows your cart totals across all open tabs before you buy. Genuinely useful → https://chromewebstore.google.com/detail/tabspend/YOUR_EXT_ID`;
+
+  function shareOnX() {
+    // analytics: trackEvent('share_x')
+    const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(SHARE_TEXT)}`;
+    window.open(url, '_blank', 'width=550,height=420');
+  }
+
+  function shareOnReddit() {
+    // analytics: trackEvent('share_reddit')
+    const title = encodeURIComponent('TabSpend – free Chrome extension that shows your total open-tab spend in real time');
+    const url = encodeURIComponent('https://chromewebstore.google.com/detail/tabspend/YOUR_EXT_ID');
+    window.open(`https://reddit.com/submit?title=${title}&url=${url}`, '_blank');
+  }
+
+  function copyShareSnippet() {
+    // analytics: trackEvent('share_copy')
+    navigator.clipboard.writeText(SHARE_TEXT).then(() => {
+      const toast = document.getElementById('copy-toast');
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2200);
+    });
+  }
+
+  // ── Nav shadow on scroll ───────────────────────
+  window.addEventListener('scroll', () => {
+    document.querySelector('nav').style.background =
+      window.scrollY > 20 ? 'rgba(8,10,15,0.97)' : 'rgba(8,10,15,0.85)';
+  }, { passive: true });
+
+  // ── Analytics placeholder ──────────────────────
+  // Replace with your analytics provider (Plausible, Fathom, GA4, etc.)
+  // function trackEvent(name, props) {
+  //   window.plausible?.(name, { props });
+  //   window.gtag?.('event', name, props);
+  // }
+</script>
+
+</body>
+</html>
